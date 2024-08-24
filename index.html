@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <title>Aluras text cypher</title>
+
+</head>
+
+<body>
+    <header class="header">
+        <img class="header-logotype" src="/img/alura-logotype.png" alt="Company logotype">
+        <h1 class="page-title">Alura Text Cypher</h1>
+    </header>
+    <main>
+        <section class="input-area">
+            <div class="input-text-area">
+                <textarea class="input-text" cols="35" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+            </div>
+            <div class="help-info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2" />
+                </svg>
+                <h6 class="information-message">Letras minúsculas o con acento seran normalizadas</h6>
+            </div>
+            <div class="main-buttons">
+                <button class="btn encrypt-btn" onclick="encryptBtn()">Encriptar</button>
+                <button class="btn decrypt-btn" onclick="decryptBtn()">Desencriptar</button>
+            </div>
+        </section>
+        <section class="output-area">
+            <textarea class="output-text" cols="20" rows=10, placeholder=""></textarea>
+            <div class="output-placeholder">
+                <div class="placeholder-img-div">
+                    <img class="encrypt-gif" src="img/encr-key.gif" alt="Imagen de ningún mensaje encontrado">
+                </div>
+                <div class="placeholder-text-div">
+                    <p class="no-message-found">Ningún mensaje fue encontrado</p>
+                    <p class="out-info-message">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+            </div>
+            <div class="output-buttons">
+                <button class="btn copy-btn" onclick="copyText()">Copiar</button>
+                <button class="btn clear-btn" onclick="clearAllText()">Limpiar</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-area">
+            <label class="contact-label">Contacto: </label>
+            <a href="https://github.com/manuel-gcl"><img class="footer-logotypes" src="img/github-logotype.png" alt="github logo"></a>
+            <a href="https://www.linkedin.com/in/manuel-gonzalez-claria-3623a119b/"><img class="footer-logotypes" src="img/linkedin-logotype.png"
+                    alt="linkedin logo"></a>
+        </div>
+    </footer>
+</body>
+
+<script src="js/app.js"></script>
+
+</html>
